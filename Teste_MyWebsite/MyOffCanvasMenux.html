@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Off-Canvas</title>
+    
+        <!-- Fontawesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+
+
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        .Sidenave {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;      
+            padding-top: 60px;
+            transition: 0.3s;
+            font-size: 50px;
+
+            
+
+        }
+
+        .Sidenave a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 50px;
+            color: aliceblue;
+            margin-left: 50px;
+            display: block;
+        }
+
+     
+
+        .Sidenave .myClose {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .Sidenave a:hover {
+            color: black;
+    }
+
+        .myOpen {
+            font-size: 30px;
+            cursor: pointer;
+    }
+
+
+    #main {
+        padding: 16px;
+        transition: margin-left 0.5s;
+    
+    }
+    </style>
+   
+   
+
+</head>
+
+
+<body>
+
+    <div id="mySidenav" class="Sidenav">
+        <a href="#" class="myClose" onclick="CloseNav()">&times;</a>
+        <a href="#Sobremim">Sobre Mim</a>
+        <a href="#Experiencia">Experiência</a>
+        <a href="#Contactos">Contactos</a>
+</div>
+
+    <div id="main">
+        <span class="myOpen" onclick="OpenNav()">&#9776;</span>
+        <h1>Menu Off-Canvas</h1>
+        <p>
+            Texto
+        </p>
+</div>
+
+<script>
+    function OpenNav() {
+        document.getElementById('mySidenav').style.width = '250px';
+        document.getElementById('main').style.marginLeft = '250px';
+    }
+
+
+    function CloseNav() {
+        document.getElementById('mySidenav').style.width = '0';
+        document.getElementById('main').style.marginLeft = '0';
+    }
+
+</script>
+
+
+
+
+</body>
+</html>
